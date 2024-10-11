@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe Page</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('https://i.pinimg.com/originals/67/e2/c5/67e2c58a839655610abfb89b430104eb.jpg');
+            background-size: cover;
+            position: relative;
+        }
+        iframe {
+            width: 80%;
+            height: 80%;
+            border: none;
+        }
+        .button-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .button {
+            background: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        .fullscreen {
+            background: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="button-container">
+        <button class="button" onclick="window.location.href='https://BestUNBLOCKED.github.io/index.html'">Return To Home</button>
+        <button class="fullscreen" onclick="toggleFullscreen()">Fullscreen</button>
+    </div>
+
+    <iframe id="myIframe" src="https://asmallfreecup.github.io/Basket-Ball-Stars/"></iframe>
+
+    <script>
+        function toggleFullscreen() {
+            const iframe = document.getElementById('myIframe');
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) { // Firefox
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { // IE/Edge
+                iframe.msRequestFullscreen();
+            }
+        }
+    </script>
+
+</body>
+</html>
